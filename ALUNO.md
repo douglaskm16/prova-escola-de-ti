@@ -2,9 +2,9 @@
 
 # ALUNO
 
-Nome: douglaskm16
+Nome: Douglas Kenji Matsumoto
 
-RA: >>> PREENCHER <<<
+RA: 234035492
 
 Conta GitHub: @douglaskm16
 
