@@ -102,7 +102,9 @@ Quando não houver bilhetes encerrados no dia, os valores agregados devem ser `0
 
 Quando o contrato solicitar os bilhetes mais recentes primeiro, a resposta deve apresentar primeiro os bilhetes criados mais recentemente.
 
-A ordenação deve ser determinística, utilizando o identificador como critério de desempate quando necessário.
+A ordenação deve ser decrescente pela ordem de criação do bilhete.
+
+O identificador deve ser utilizado somente como critério de desempate, garantindo uma ordenação determinística.
 
 ## 11. Isolamento das responsabilidades
 
