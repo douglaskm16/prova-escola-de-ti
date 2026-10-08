@@ -205,11 +205,12 @@ A média deverá utilizar arredondamento com `0,5` para cima.
 
 ## 12. Ordenação
 
-As consultas que exigem os bilhetes mais recentes primeiro deverão aplicar uma ordenação determinística.
+As consultas que exigem os bilhetes mais recentes primeiro deverão ordenar os registros pela ordem de criação, do mais recente para o mais antigo.
 
-A criação mais recente deve aparecer primeiro e o identificador poderá ser utilizado como critério de desempate.
+O identificador será utilizado somente como critério de desempate.
 
-Isso será aplicado tanto à listagem de ativos quanto ao histórico por placa.
+Isso garante que a ordenação seja determinística sem adicionar um novo campo à resposta da API.
+
 
 ## 13. Tratamento de erros
 

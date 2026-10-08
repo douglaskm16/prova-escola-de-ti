@@ -125,7 +125,7 @@ O caso T40 verifica especificamente a transição entre o valor calculado abaixo
 | T50 | Listar sem bilhetes abertos             | `200` com `[]`                  |
 | T51 | Misturar aberto e encerrado             | Somente aberto aparece          |
 | T52 | Misturar aberto e cancelado             | Somente aberto aparece          |
-| T53 | Vários bilhetes abertos                 | Mais recentes aparecem primeiro |
+| T53 | Vários bilhetes abertos | Bilhetes aparecem em ordem decrescente de criação |
 | T54 | Bilhete encerrado não volta para ativos | Não aparece                     |
 
 ---
@@ -140,7 +140,7 @@ O caso T40 verifica especificamente a transição entre o valor calculado abaixo
 | T58 | Histórico com outras placas existentes      | Bilhetes de outras placas não aparecem |
 | T59 | Histórico de placa inválida                 | `422`, `placa_invalida`                |
 | T60 | Consulta sem parâmetro `placa`              | `422`, `placa_invalida`                |
-| T61 | Histórico ordenado                          | Mais recentes primeiro                 |
+| T61 | Histórico ordenado | Bilhetes aparecem em ordem decrescente de criação |
 
 ---
 

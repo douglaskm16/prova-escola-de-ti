@@ -274,7 +274,10 @@ Bilhete que não pode mais ser encerrado:
 
 Retornar somente os bilhetes cujo status seja `aberto`.
 
-Os bilhetes devem ser apresentados dos mais recentes para os mais antigos.
+Os bilhetes devem ser apresentados em ordem decrescente de criação, com os mais recentemente criados primeiro.
+
+O identificador deve ser utilizado somente como critério de desempate para garantir uma ordenação determinística.
+
 
 ### Sucesso
 
@@ -300,7 +303,7 @@ Caso não existam bilhetes ativos, retornar um array vazio.
 * **CA3.1:** bilhetes abertos devem aparecer na resposta.
 * **CA3.2:** bilhetes encerrados não devem aparecer.
 * **CA3.3:** bilhetes cancelados não devem aparecer.
-* **CA3.4:** os bilhetes devem ser retornados dos mais recentes para os mais antigos.
+* **CA3.4:** os bilhetes devem ser retornados em ordem decrescente de criação, do mais recentemente criado para o mais antigo.
 * **CA3.5:** quando não houver bilhetes ativos, a resposta deve ser `HTTP 200` com `[]`.
 
 ## 8. UC4 - Relatório diário
@@ -420,36 +423,34 @@ Bilhete encerrado ou cancelado:
 
 ## 10. UC6 - Consultar histórico por placa
 
-### Endpoint
+Endpoint
 
-`GET /bilhetes?placa=ABC1D23`
+GET /bilhetes?placa=ABC1D23
 
-### Comportamento
+Comportamento
 
 Retornar todos os bilhetes associados à placa, independentemente do status.
 
-Os resultados devem ser apresentados dos mais recentes para os mais antigos.
+Os resultados devem ser apresentados em ordem decrescente de criação, do mais recentemente criado para o mais antigo.
 
 Uma placa que nunca possuiu bilhete deve retornar um array vazio.
 
-### Erros
+Erros
 
 Placa ausente ou inválida:
 
-`HTTP 422`
+HTTP 422
 
-```json
 {"erro":"placa_invalida"}
-```
 
-### Critérios de aceitação
+Critérios de aceitação
 
-* **CA6.1:** uma placa válida deve retornar todos os seus bilhetes.
-* **CA6.2:** o histórico deve incluir bilhetes `aberto`, `encerrado` e `cancelado`.
-* **CA6.3:** bilhetes de outras placas não devem aparecer.
-* **CA6.4:** os resultados devem ser ordenados dos mais recentes para os mais antigos.
-* **CA6.5:** uma placa sem histórico deve retornar `HTTP 200` com `[]`.
-* **CA6.6:** uma placa inválida ou ausente deve retornar `422` com `erro = placa_invalida`.
+CA6.1: uma placa válida deve retornar todos os seus bilhetes.
+CA6.2: o histórico deve incluir bilhetes aberto, encerrado e cancelado.
+CA6.3: bilhetes de outras placas não devem aparecer.
+CA6.4: os resultados devem ser ordenados em ordem decrescente de criação, do mais recentemente criado para o mais antigo.
+CA6.5: uma placa sem histórico deve retornar HTTP 200 com [].
+CA6.6: uma placa inválida ou ausente deve retornar HTTP 422 com erro = placa_invalida.
 
 ## 11. UC7 - Regra de tolerância
 

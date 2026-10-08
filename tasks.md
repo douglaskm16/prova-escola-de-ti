@@ -258,7 +258,7 @@ Os cenários T42–T48 devem ser atendidos.
 * retornar somente bilhetes `aberto`;
 * excluir encerrados;
 * excluir cancelados;
-* ordenar pelos mais recentes;
+* ordenar pela ordem de criação, do mais recente para o mais antigo;
 * retornar `[]` quando não houver ativos.
 
 **Critério de conclusão:**
@@ -276,7 +276,7 @@ Os cenários T49–T54 devem ser atendidos.
 * localizar todos os bilhetes da placa;
 * incluir todos os estados;
 * excluir bilhetes de outras placas;
-* ordenar pelos mais recentes;
+* ordenar pela ordem de criação, do mais recente para o mais antigo;
 * retornar `[]` quando não houver histórico.
 
 **Critério de conclusão:**
