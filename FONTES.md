@@ -16,7 +16,7 @@
 
 | # | URL | O que foi consultado | Onde aparece no entregável |
 | --- | --- | --- | --- |
-| — | | | |
+| 1 | https://chatgpt.com/share/6ac6e635-0cd8-83e9-8eea-f8a7090ce005 | Consultei explicações sobre a prova Track 01, a estrutura dos arquivos `.md` e como distribuir os requisitos entre eles | constitution.md, spec.md, plan.md, tests.md, tasks.md |
 
 *(Ex.: `https://docs.oracle.com/...` → sintaxe de `Optional` → `plan.md` na
 seção de decisões. Esse link é ILUSTRATIVO — fora de linha numerada não
